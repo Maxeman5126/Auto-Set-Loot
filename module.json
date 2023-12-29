@@ -1,0 +1,10 @@
+{
+    "name": "Auto-Set-Loot",
+    "author": "Maxeman",
+    "description": "Set loot automatically or from a command",
+    "options": {
+        "reloadable": true
+    },
+    "disableAutoUpdate": true,
+    "version": "12/28/2023"
+}
