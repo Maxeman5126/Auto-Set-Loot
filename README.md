@@ -12,7 +12,7 @@ Easily set loot from a command "setloot" in game.
 
 **/8 setloot party** | Not yet implemented
 
-#Installation
+# Installation
 
 Create a new folder in your "Mods" directory of toolbox and name it "Auto-Set-Loot".
 Download the file "module.json".
