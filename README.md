@@ -1,0 +1,2 @@
+# Auto Set Loot
+ 
