@@ -1,6 +1,6 @@
 # Auto-Set-Loot
 
-Easily set loot from a command in game without needing 
+Easily set loot from a command "setloot" in game.
 
 # Commands
 
