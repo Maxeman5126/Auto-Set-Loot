@@ -1,9 +1,6 @@
 const DefaultSettings = {
-        "version": 1,
-        "data": {
-            "enabled": true,
-            "auto": false
-        }
+		"enabled": true,
+		"auto": false
     }
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
