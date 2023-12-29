@@ -1,5 +1,14 @@
 {
-    "disableAutoUpdate": false,
     "name": "Auto-Set-Loot",
-    "description": "Description goes here."
+    "author": "Maxeman",
+    "description": "Set loot automatically or from a command",
+    "options": {
+        "cliName": "Auto Set Loot",
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"
+    },
+    "disableAutoUpdate": false,
+    "version": "12/28/2023",
+    "servers": ["https://raw.githubusercontent.com/Maxeman5126/Auto-Set-Loot/master/"]
 }
