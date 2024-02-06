@@ -30,10 +30,10 @@ module.exports = function autoSetLoot(m) {
 				noCombat:false
 			});
 	};
-	mod.hook("C_PARTY_LOOTING_METHOD",1,{
+	m.hook("C_PARTY_LOOTING_METHOD", 'raw', event => {
 		lootSetTime = Date.now();
 	});
-    mod.hook("S_PARTY_LOOTING_METHOD_VOTE", 1, event => {
+    m.hook("S_PARTY_LOOTING_METHOD_VOTE", 1, event => {
 		//Need to prompt us if we're leader and a party member set loot via this mod.
 		if (lootSetTime && (Date.now() - lootSetTime) < 250) return;
         event.isLeader = false;
