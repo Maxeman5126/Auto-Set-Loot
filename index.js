@@ -1,4 +1,5 @@
 module.exports = function autoSetLoot(m) {
+	let lootSetTime = null;
 	m.command.add("setloot", {
 		$default() {
 			setLoot();
@@ -18,6 +19,7 @@ module.exports = function autoSetLoot(m) {
 	});
 	function setLoot(){
 		if(!m.settings.enabled) return m.command.message('Auto Set Loot is not enabled. To enable it, please use command: setloot toggle');
+		lootSetTime = Date.now();
 		m.send("C_PARTY_LOOTING_METHOD",1,{
 				methodLoot:1,
 				rareGrade:0,
@@ -28,4 +30,12 @@ module.exports = function autoSetLoot(m) {
 				noCombat:false
 			});
 	};
+	mod.hook("C_PARTY_LOOTING_METHOD",1,{
+		lootSetTime = Date.now();
+	});
+    mod.hook("S_PARTY_LOOTING_METHOD_VOTE", 1, event => {
+		//Need to prompt us if we're leader and a party member set loot via this mod.
+		if (lootSetTime && (Date.now() - lootSetTime) < 250) return;
+        event.isLeader = false;
+    });
 };

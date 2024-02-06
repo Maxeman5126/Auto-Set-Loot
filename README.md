@@ -12,9 +12,9 @@ Easily set loot from a command "setloot" in game.
 
 **/8 setloot party** | Not yet implemented
 
-# Installation
+## Installation
+- Create a folder called `set-loot` in `tera-toolbox/mods` and download >> [`module.json`](https://raw.githubusercontent.com/maxeman/Auto-Set-Loot/master/module.json) << (right-click this link and save link as..) into the folder
 
-Create a new folder in your "Mods" directory of toolbox and name it "Auto-Set-Loot".
-Download the file "module.json".
-Place the file within the new folder.
-Start toolbox and the mod will auto-install.
+# Info
+You can start a vote even if you are not party leader, but it will typicall fail because they do not get an option to vote.
+If the party leader has this mod as well, then they will be able to vote.
